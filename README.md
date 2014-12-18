@@ -1,6 +1,8 @@
 # BulkUploadable
+Quick bulk insert to database. It comes handy when data needs to be populated from csv or excel files.
 
-TODO: Write a gem description
+Tested on rails 3.2.13 and ruby 2.1.0
+
 
 ## Installation
 
@@ -18,7 +20,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+  Include following code to you gem file
+
+    include BulkUploadable
+
+    Model.bulk_upload([:column1, :column2], [["value1", "value2"], ["value1", value2]])
+
+  e.g:
+
+    class User < ActiveRecord::Base
+      attr_accessible :email, :name
+      include BulkUploadable
+    end
+
+    User.bulk_upload([:email, :name], [["petrik@gmail.com", "Petrik"], ["jhon@gmail.com", "Jhon"]])
+
 
 ## Contributing
 
