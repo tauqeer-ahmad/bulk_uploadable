@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tauqeer.ahmad2008@gmail.com"]
   spec.summary       = %q{Bulk Insert with ActiveRecord and PostgreSQL}
   spec.description   = %q{Bulk Insert with ActiveRecord and PostgreSQL}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/tauqeerahamd/bulk_uploadable"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
