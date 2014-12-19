@@ -33,8 +33,11 @@ Or install it yourself as:
       include BulkUploadable
     end
 
+    with out transaction 
     User.bulk_upload([:email, :name], [["petrik@gmail.com", "Petrik"], ["jhon@gmail.com", "Jhon"]])
 
+    with transaction
+    User.bulk_upload([:email, :name], [["petrik@gmail.com", "Petrik"], ["jhon@gmail.com", "Jhon"]], true)
 
 ## Contributing
 
